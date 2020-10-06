@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Smile Daily 😊 — The daily email with good news &amp; positive information</title>
+    <meta name="description" content="The daily email with good news & positive information">
+    <meta property="og:title" content="Smile Daily 😊">
+    <meta property="og:description"content="The daily email with good news & positive information">
+    <meta property="og:image" content="/favicon.png">
+    <meta property="og:url" content="https://smiledaily.us/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="Smile Daily 😊">
+    <meta name="twitter:image:alt" content="Screenshot of landing page">
+    <!-- <meta property="fb:app_id" content="your_app_id"> -->
+    <meta name="twitter:site" content="@smiledailyus">
+    <!-- <link rel="icon" href="/favicon.png" type="image/png"> -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20x='0'%20y='14'%3E😊%3C/text%3E%3C/svg%3E"
+      type="image/svg+xml"
+   >
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
+      html,
+      body {
+        align-items: center;
+        background-color: #fff;
+        display: flex;
+        font-family: system-ui, sans-serif;
+        font-size: 1rem;
+        justify-content: center;
+        margin: 0;
+        min-height: 100vh;
+        width: 100%;
+      }
+      body {
+        padding: 0 16px;
+        border: 12px solid #ffce37;
+      }
+      img {
+        max-width: 100%;
+      }
+      a[href],
+      a[href]:visited {
+        color: black;
+      }
+      a[href]:hover,
+      a[href]:visited:hover {
+        color: #f3b906;
+      }
+
+      .visually-hidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: auto;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+      }
+
+      /* tiny form */
+
+      .tiny-form {
+        /* margin: auto; */
+      }
+      .tiny-form input[type='email'],
+      .tiny-form button {
+        border-radius: 5px;
+        border-style: solid;
+        /* border-width: 1px; */
+        font-size: 1.2rem;
+        margin-bottom: 1em;
+        padding: 1em 1.6em;
+      }
+      .tiny-form input[type='email'] {
+        background-color: transparent;
+        border-color: #dfe1e5;
+        transition: all 0.2s ease;
+      }
+      .tiny-form input[type='email']:focus {
+        border-color: #ffce37;
+        outline: none;
+      }
+      .tiny-form button[type='submit'] {
+        background-color: #ffce37;
+        border-color: #ffce37;
+        color: #000;
+      }
+      .tiny-form button[type='submit']:hover {
+        background-color: #fff;
+        border-color: #ffce37;
+        color: #000;
+        cursor: pointer;
+      }
+
+      /* media queries */
+
+      @media screen and (min-width: 768px) {
+        body {
+          border: 48px solid #ffce37;
+          padding: 0 24px;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        /* body {
+          background: #222;
+          color: white;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Smile Daily 😊</h1>
+      <h2>Start your day with a smile</h2>
+      <p>
+        Get the daily email with good news &amp; positive information
+      </p>
+      <form
+        action="https://emailoctopus.com/lists/a1fccc57-d9d8-11ea-a3d0-06b4694bee2a/members/embedded/1.3/add"
+        class="tiny-form"
+        data-confirm-url="/thank-you/"
+        data-sitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6"
+        id="tiny-form"
+        method="post"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <input
+          autofocus
+          id="field_0"
+          name="field_0"
+          placeholder="Enter your email"
+          required
+          type="email"
+        />
+        <!-- Do not remove this field, otherwise you risk bot sign-ups -->
+        <input
+          aria-hidden="true"
+          autocomplete="nope"
+          class="visually-hidden"
+          name="hpa1fccc57-d9d8-11ea-a3d0-06b4694bee2a"
+          tabindex="-1"
+          type="text"
+        />
+        <button type="submit">Sign up</button>
+      </form>
+      <p>
+        We're also on twitter
+        <a
+          href="https://twitter.com/smiledailyus"
+          rel="noopener noreferrer"
+          target="_blank"
+          >@SmileDailyus</a
+        >
+        — come say hi 👋
+      </p>
+    </main>
+
+    <script>
+      document.documentElement.classList.remove('no-js');
+
+      window.addEventListener('load', function() {
+        function sendData() {
+          const XHR = new XMLHttpRequest();
+          const FD = new FormData(form);
+          XHR.addEventListener('load', function(event) {
+            const response = JSON.parse(event.target.responseText);
+            if (response && response.success) {
+              // redirect to confirm url, if present
+              if (form.dataset.confirmUrl) {
+                // window.open(form.dataset.confirmUrl, '_blank', 'noopener noreferrer');
+                alert(
+                  "There's just one last step to confirm your subscription — click the link in the confirmation email that should be in your inbox. If you don't see a confirmation email from us, please check your SPAM folder."
+                );
+              }
+
+              // reset form
+              form.reset();
+            } else {
+              alert('Oops! Something went wrong.');
+            }
+          });
+          XHR.addEventListener('error', function(event) {
+            alert('Oops! Something went wrong.');
+          });
+          XHR.open('POST', form.action);
+          XHR.send(FD);
+        }
+
+        const form = document.getElementById('tiny-form');
+        // form.removeAttribute('target');
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          sendData();
+        });
+      });
+    </script>
+    <!-- Google Analytics -->
+    <script>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+      ga('create', 'UA-175251337-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+  </body>
+</html>
